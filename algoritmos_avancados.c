@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
 // Estrutura da sala (nó da árvore binária)
 typedef struct Sala {
@@ -59,6 +60,8 @@ void explorarSalas(Sala* salaAtual) {
 
 // Função principal: cria a árvore (mapa da mansão)
 int main() {
+    // Habilita caracteres acentuados de acordo com o sistema
+    setlocale(LC_ALL, "");
     // Criação das salas
     Sala* hallEntrada = criarSala("Hall de Entrada");
     Sala* salaEstar = criarSala("Sala de Estar");
